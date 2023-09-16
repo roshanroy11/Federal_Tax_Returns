@@ -1,0 +1,58 @@
+﻿<Window x:Class="Federal_Tax_Returns.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Federal_Tax_Returns"
+        mc:Ignorable="d"
+        Title="IST331_Federal Tax Returns" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid Background="#FF199891" RenderTransformOrigin="0.5,0.436">
+        <TextBox x:Name="txtFirst_Name" HorizontalAlignment="Left" Margin="161,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="28" FontSize="13" FontFamily="Times New Roman" TextChanged="txtFirst_Name1_TextChanged"/>
+        <ComboBox x:Name="cboNo_of_Dependents" HorizontalAlignment="Left" Margin="161,202,0,0" VerticalAlignment="Top" Width="132" Height="28" FontSize="13" FontFamily="Times New Roman" SelectionChanged="cboFilling_Status_SelectionChanged">
+            
+            <ComboBoxItem Content="0" IsSelected="True" />
+            <ComboBoxItem Content="1" />
+            <ComboBoxItem Content="2" />
+            <ComboBoxItem Content="3" />
+            <ComboBoxItem Content="4" />
+            <ComboBoxItem Content="5" />
+
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="#FF827D7D" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <Label x:Name="lblFirst_Name" Content="First Name" HorizontalAlignment="Left" Margin="67,78,0,0" VerticalAlignment="Top" Width="75" Height="29" FontSize="13" FontFamily="Times New Roman"/>
+        <TextBox x:Name="txtLast_Name" HorizontalAlignment="Left" Margin="161,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="27" FontSize="13" FontFamily="Times New Roman" TextChanged="txtLast_Name_TextChanged"/>
+        <TextBox x:Name="txtSocial_Security_Number" HorizontalAlignment="Left" Margin="161,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="28" FontSize="13" FontFamily="Times New Roman" TextChanged="txtSocial_Security_Number_TextChanged"/>
+        <Button x:Name="btnCalculate" Content="Calculate" HorizontalAlignment="Left" Margin="283,295,0,0" VerticalAlignment="Top" Height="28" Width="78" FontSize="14" FontFamily="Times New Roman" BorderBrush="Black" BorderThickness="3,3,3,3" Background="#FF9AEF5E" Click="btnCalculate_Click"/>
+        <TextBox x:Name="txtTax_Owe" HorizontalAlignment="Left" Margin="168,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" Height="33" FontSize="13" FontFamily="Times New Roman"/>
+        <TextBox x:Name="txtOwe_or_Refund" HorizontalAlignment="Left" Margin="350,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116" Height="33" FontSize="13" FontFamily="Times New Roman"/>
+        <TextBox x:Name="txtTax_Refund" HorizontalAlignment="Left" Margin="524,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114" Height="33" FontSize="13" FontFamily="Times New Roman"/>
+        <Label x:Name="lblLast_Name" Content="Last Name" HorizontalAlignment="Left" Margin="67,117,0,0" VerticalAlignment="Top" Width="75" Height="28" FontSize="13" FontFamily="Times New Roman"/>
+        <Label x:Name="lblSocial_Secuirty_Number" Content="SSN" HorizontalAlignment="Left" Margin="86,159,0,0" VerticalAlignment="Top" Width="38" Height="30" FontSize="13" FontFamily="Times New Roman"/>
+        <Label x:Name="lblFilling_Status" Content="Filling Status:" HorizontalAlignment="Left" Margin="160,252,0,0" VerticalAlignment="Top" Width="82" Height="26" FontSize="13" FontFamily="Times New Roman"/>
+        <Label x:Name="lblNo_of_Dependents" Content="No. of Dependents" HorizontalAlignment="Left" Margin="46,200,0,0" VerticalAlignment="Top" Width="115" Height="24" FontSize="13" FontFamily="Times New Roman"/>
+        <Label x:Name="lblTax_Owe" Content="Tax Owe" HorizontalAlignment="Left" Margin="177,338,0,0" VerticalAlignment="Top" Width="96" FontSize="13" FontFamily="Times New Roman"/>
+        <Label x:Name="lblOwe_or_Refund" Content="Owe Or Refund" HorizontalAlignment="Left" Margin="360,338,0,0" VerticalAlignment="Top" Width="96" FontSize="13" FontFamily="Times New Roman"/>
+        <Label x:Name="lblTax_Refund" Content="Tax Refund" HorizontalAlignment="Left" Margin="532,338,0,0" VerticalAlignment="Top" Width="96" FontSize="13" FontFamily="Times New Roman"/>
+        <Label x:Name="lblTitle" Content="Federal Tax Returns" HorizontalAlignment="Left" Margin="302,22,0,0" VerticalAlignment="Top" Width="180" Height="39" FontSize="20" FontFamily="Times New Roman"/>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="424,295,0,0" VerticalAlignment="Top" Height="28" Width="78" FontSize="14" FontFamily="Times New Roman" BorderBrush="Black" BorderThickness="3,3,3,3" Background="#FFF5944F" Click="btnClear_Click"/>
+        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="710,28,0,0" VerticalAlignment="Top" Height="25" Width="69" BorderBrush="Black" BorderThickness="3,3,3,3" Background="#FFEC4C1E" FontSize="14" FontFamily="Times New Roman" Click="btnExit_Click"/>
+        <TextBox x:Name="txtGross_Income" HorizontalAlignment="Left" Margin="557,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="28" FontSize="13" FontFamily="Times New Roman" TextChanged="txtFirst_Name1_TextChanged"/>
+        <TextBox x:Name="txtCharitable_Deduction" HorizontalAlignment="Left" Margin="557,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="27" FontSize="13" FontFamily="Times New Roman" TextChanged="txtCharitable_Deduction_TextChanged"/>
+        <TextBox x:Name="txtMortgage_Interest" HorizontalAlignment="Left" Margin="557,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="28" FontSize="13" FontFamily="Times New Roman" TextChanged="txtMortgage_InterestTextChanged"/>
+        <Label x:Name="lblCharitable_Deduction" Content="Charitable Deduction" HorizontalAlignment="Left" Margin="434,116,0,0" VerticalAlignment="Top" Width="123" Height="28" FontSize="13" FontFamily="Times New Roman"/>
+        <Label x:Name="lblMortgage_Interest" Content="Mortgage Interest" HorizontalAlignment="Left" Margin="439,156,0,0" VerticalAlignment="Top" Width="113" Height="29" FontSize="13" FontFamily="Times New Roman"/>
+        <Label x:Name="lblTax_Already_Paid" Content="Tax Already Paid" HorizontalAlignment="Left" Margin="444,200,0,0" VerticalAlignment="Top" Width="110" Height="24" FontSize="13" FontFamily="Times New Roman"/>
+        <Label x:Name="lblGross_Income" Content="Gross Income" HorizontalAlignment="Left" Margin="452,78,0,0" VerticalAlignment="Top" Width="95" Height="30" FontSize="13" FontFamily="Times New Roman"/>
+        <TextBox x:Name="txtTax_Already_Paid" HorizontalAlignment="Left" Margin="557,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="28" FontSize="13" FontFamily="Times New Roman"/>
+        <RadioButton x:Name="radSingle" Content="Single"  HorizontalAlignment="Left" Margin="247,258,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <RadioButton x:Name="radMarried" Content="Married"  HorizontalAlignment="Left" Margin="316,258,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radMarriage_Filing_Separately" Content="Maried Filing Separately"  HorizontalAlignment="Left" Margin="395,258,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radHead_of_Household" Content="Head of Household" HorizontalAlignment="Left" Margin="557,258,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
